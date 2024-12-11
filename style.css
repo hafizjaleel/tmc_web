@@ -1,0 +1,35 @@
+.image-container1,
+        .hover-image1 {
+            display: none; /* Initially hidden */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .image-container {
+                display: none; /* Hide desktop image container */
+            }
+            .image-container1 {
+                display: inline-block; /* Show mobile image container */
+            }
+            img[src="image_phone.png"] {
+                display: block; /* Show mobile image */
+            }
+            map[name="image-map"] {
+                display: none; /* Hide desktop image map */
+            }
+            map[name="image-map1"] {
+                display: block; /* Show mobile image map */
+            }
+            .hover-image {
+                display: none; /* Hide desktop hover image */
+            }
+            .hover-image1 {
+                display: block; /* Show mobile hover image */
+            }
+        }
+
+        .hover-image,
+        .hover-image1 {
+            position: absolute;
+            display: none; /* Initially hidden */
+            pointer-events: none; /* Prevent hover image from interfering with mouse events */
+        }

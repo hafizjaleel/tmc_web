@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the marketing company</title>
-    <style>
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
-        .hover-image {
-            position: absolute;
-            display: none; /* Initially hidden */
-            top: 2444px; /* Adjust based on the area coordinates */
-            left: 99px; /* Adjust based on the area coordinates */
-            width: 1239px; /* Adjust based on the area size */
-            height: 313px; /* Adjust based on the area size */
-        }
-    </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Marketing Company</title>
 </head>
 <body>
     <div class="image-container">
-        <img src="image.png" usemap="#image-map" alt="Image Map">
-        <a href="https://wa.link/9moyap"><img src="box.png" class="hover-image" id="hoverImage" alt="Hover Image"></a>
+        <img src="image.png" usemap="#image-map" alt="Image Map" />
+        <img src="box.png" class="hover-image" id="hoverImage" alt="Hover Image" />
     </div>
 
     <map name="image-map">
-        <area target="_self" alt="" title="" href="https://wa.link/9moyap" coords="98,2444,1339,2757" shape="rect" 
-              onmouseover="showHoverImage();" onmouseout="hideHoverImage();" onclick="redirectToLink(event);">
+        <area
+            target="_self"
+            alt=""
+            title=""
+            href="https://wa.link/9moyap"
+            coords="98,2444,1339,2757"
+            shape="rect"
+            onmouseover="showHoverImage(event);"
+            onmouseout="hideHoverImage();"
+            onclick="redirectToLink(event);"
+        />
     </map>
 
-    <script>
-        function showHoverImage() {
-            const hoverImage = document.getElementById('hoverImage');
-            hoverImage.style.display = 'block'; // Show the new image
-        }
+    <div class="image-container1">
+        <img src="image_phone.png" usemap="#image-map1" alt="Image Map" />
+        <img src="box_phone.png" class="hover-image1" id="hoverImage1" alt="Hover Image1" />
+    </div>
 
-        function hideHoverImage() {
-            const hoverImage = document.getElementById('hoverImage');
-            hoverImage.style.display = 'none'; // Hide the new image
-        }
-
-        function redirectToLink(event) {
-            event.preventDefault(); // Prevent the default anchor behavior
-            const link = event.target.href; // Get the href from the area
-            window.location.href = link; // Redirect to the link
-        }
-    </script>
+    <map name="image-map1">
+        <area
+            target=""
+            alt=""
+            title=""
+            href="https://wa.link/9moyap"
+            coords="31,1146,379,1250"
+            shape="rect"
+            onmouseover="showHoverImage1(event);"
+            onmouseout="hideHoverImage1();"
+            onclick="redirectToLink1(event);"
+        />
+    </map>
 </body>
-</html>
+</html> 
+
